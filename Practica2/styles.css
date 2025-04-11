@@ -1,0 +1,157 @@
+.navbar-brand{
+    color: #eb9ac0;
+}
+.navbar-brand, .nav-link {
+    font-weight: bold;
+    white-space: nowrap;
+}
+.nav-link:hover {
+    text-decoration: underline;
+    color: #eb9ac0 !important;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Sawarabi Mincho', serif;
+}
+.navbar-brand {
+    font-family: 'Pacifico', cursive; 
+}
+
+h2,h5{
+    color: #801d56 !important;
+}
+h1{
+    color: #801d56;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.space-between-header-cards {
+    margin-top: 100px;
+}
+.btn-color {
+    background-color: #fbd5e5; 
+}
+
+.btn-color:hover {
+    background-color: #801d56;
+    color: white; 
+}
+
+.ingredients, .steps {
+    margin-top: 20px;
+}
+.ingredient-item, .step-item {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.recipe-image {
+    max-width: 100%;
+    height: auto;
+}
+.review-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.review-content {
+    font-style: italic;
+    color: #555;
+}
+.review-card {
+    margin-bottom: 20px;
+}
+.star-rating {
+    color: #FFD700;
+}
+.fixed-left {
+    position: fixed;
+    top: 100px;
+    left: 5px;
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.steps-container {
+    margin-left: 350px;
+    padding-top: 50px;
+}
+
+.recipe-container {
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .fixed-left {
+        position: static;
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 15px;
+
+    }
+    .steps-container {
+        margin-left: 5px;
+    }
+}
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: rgb(var(--bs-tertiary-color-rgb));
+    }
+    .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    }
+    .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+    }
+    
+    .featurette-divider {
+    margin: 5rem 0; 
+    }
+    .featurette-heading {
+    letter-spacing: -.05rem;
+    }
+
+    
+    @media (min-width: 40em) {
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+    } 
+    
+    @media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+    }
+
+    footer{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        background-color: #343a40;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: auto;
+        color: #fbd5e5;
+    } 
+html, body{
+    height: 100%;
+}
+.footer p{
+    margin: 0;
+}
+
+.container{
+    min-height: calc(100vh - 100px);
+}
