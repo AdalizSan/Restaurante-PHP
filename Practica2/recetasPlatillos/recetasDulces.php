@@ -5,7 +5,7 @@ $recetas = file('../datos/recetas-dulces.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sakura Dreams</title>
+    <title>Sakura Dreams - Recetas Dulces</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Restaurante Jápones en guatemala">
