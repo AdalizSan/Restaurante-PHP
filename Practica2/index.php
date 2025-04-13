@@ -47,6 +47,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="Resenias/resenias.html">Reseñas</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Reservaciones/index.php">Reservaciones</a>
+                        </li>
                     </ul>
                 </div>
             </div>
