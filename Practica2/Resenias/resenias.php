@@ -30,21 +30,21 @@
             </div>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Platillos/menu.html">Menú</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../InfoPersonal/personalSakura.html">Nuestro Equipo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../recetasPlatillos/recetas.html">Nuestras Recetas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Reseñas</a>
-                    </li>
+                    <?php 
+                        $elementosHeader = [
+                            ["directorio" => "../index.php", "Nombre" => "Inicio", "clase"=> "nav-link"],
+                            ["directorio" =>"../Platillos/menu.php", "Nombre" => "Menú", "clase"=> "nav-link"],
+                            ["directorio" =>"../InfoPersonal/personalSakura.php", "Nombre" => "Nuestro Equipo", "clase"=> "nav-link"],
+                            ["directorio" =>"../recetasPlatillos/recetas.php", "Nombre" => "Nuestras Recetas", "clase"=> "nav-link"],
+                            ["directorio" =>"../Resenias/resenias.php", "Nombre" => "Reseñas", "clase"=> "nav-link active"],
+                            ["directorio" =>"../Reservaciones/index.php", "Nombre" => "Reservaciones", "clase"=> "nav-link"]
+                        ];
+                        foreach($elementosHeader as $elemento){
+                            echo '<li class="nav-item">';
+                            echo '<a class="' . $elemento["clase"] . '" href="' . $elemento["directorio"] . '">' . $elemento["Nombre"] . '</a>';
+                            echo '</li>';
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -63,14 +63,14 @@
                     ["nombre"=>"Carlos G. – 3.5/5" , "comentario"=> "Buena comida, pero no excepcional. El ramen era decente, aunque el caldo carecía de profundidad. Los rollos de sushi eran creativos, pero algunos parecían demasiado complicados. Aún así, un buen lugar para una cena informal", "estrellas"=> "⭐⭐⭐½"],
                     ["nombre"=>"Anna W. – 5/5" , "comentario"=> "¡Sakura Dreams superó todas mis expectativas! La experiencia omakase valió cada centavo: las selecciones del chef fueron divinas. El ambiente es muy tranquilo y el personal nos hizo sentir como invitados de honor. ¡No puedo esperar a volver!", "estrellas"=> "⭐⭐⭐⭐⭐"],
                     ["nombre"=>"Brian H. – 4.5/5" , "comentario"=> "¡Un restaurante fantástico con un gran ambiente! La carne wagyu estaba deliciosa y el maridaje de sake fue perfecto. El único problema menor fue el nivel de ruido cuando el restaurante se llenaba. De lo contrario, ¡una experiencia de primera!", "estrellas"=> "⭐⭐⭐⭐½"],
-                ]
+                ];
                 foreach ($listaResenias as $resenia){
                     echo '<div class="col-md-4">';
                         echo'<div class="card review-card">';
                             echo'<div class="card-body">';
-                                echo'<h5 class="review-title">'. $resenia["nombre"]'';
-                                echo'<p class="review-content">'. $resenia["comentario"]'</p>';
-                                echo'<div class="star-rating">'. $resenia["estrellas"]'</div>';
+                                echo'<h5 class="review-title">'. $resenia["nombre"].'';
+                                echo'<p class="review-content">'. $resenia["comentario"].'</p>';
+                                echo'<div class="star-rating">'. $resenia["estrellas"].'</div>';
                             echo'</div>';
                         echo'</div>';
                     echo'</div>';

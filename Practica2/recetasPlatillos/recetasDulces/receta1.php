@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sakura Dreams</title>
+    <title>Sakura Dreams - Dorayaki clásico</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Restaurante Jápones en guatemala">
@@ -49,10 +49,11 @@
             </div>
         </div>
     </nav>
+    <h1>Sakura Dreams - Dorayaki clásico</h1>
     <div class="container recipe-container">
         <div class="fixed-left">
-            <img src="../../imagenes/platofuerte_Maki Rolls.jpg" class="recipe-image" alt="Maki Rolls">
-            <p class="recipe-description">Rollitos de sushi rellenos de pescado fresco, verduras y arroz avinagrado.</p>
+            <img src="../../imagenes/postre_Dorayaki.jpg" class="recipe-image" alt="Dorayaki clásico">
+            <p class="recipe-description">Esponjosas tortitas japonesas rellenas de pasta dulce de judías rojas. </p>
         </div>
             <div class="steps-container">
                 <div class="row ingredients">
@@ -61,12 +62,14 @@
                     <ul>
                         <?php 
                             $listaIngredientes = [
-                                ["descripcion" => "2 tazas de arroz para sushi"],
-                                ["descripcion" => "2 ½ tazas de agua"],
-                                ["descripcion" => "¼ taza de vinagre de arroz"],
-                                ["descripcion" => "2 cucharadas de azúcar"],
-                                ["descripcion" => "1 cucharadita de sal"],
-                                ["descripcion" => "4 hojas de nori (alga)"]
+                                ["descripcion" => "2 huevos grandes"],
+                                ["descripcion" => "100 g de azúcar granulada"],
+                                ["descripcion" => "2 cucharadas de miel"],
+                                ["descripcion" => "160 g de harina para todo uso"],
+                                ["descripcion" => "1 cucharadita de polvo para hornear"],
+                                ["descripcion" => "60ml de agua"],
+                                ["descripcion" => "200 g de pasta de judías rojas dulces (anko)"],
+                                ["descripcion" => "Aceite neutro (para cocinar)"]
                             ];
                             foreach ($listaIngredientes as $ingrediente){
                                 echo'<li class="ingredient-item">'.$ingrediente["descripcion"].'</li>';
@@ -75,37 +78,19 @@
                     </ul>
                     </div>
                 </div>
-            <div class="row ingredients">
-                <div class="col-12">
-                    <h4 class="recipe-title">Rellenos:</h4>
-                    <ul>
-                        <?php 
-                            $listaIngredientes = [
-                                ["descripcion" => "Pescado fresco en rodajas (atún, salmón, etc.)"],
-                                ["descripcion" => "Pepino (en juliana)"],
-                                ["descripcion" => "Aguacate (en rodajas)"],
-                                ["descripcion" => "Opcional: palitos de cangrejo, camarones tempura o queso crema"]
-                            ];
-                            foreach ($listaIngredientes as $ingrediente){
-                                echo'<li class="ingredient-item">'.$ingrediente["descripcion"].'</li>';
-                            }
-                        ?>
-                    </ul>
-                </div>
-            </div>
             <div class="row steps">
                 <div class="col-12">
                     <h4 class="recipe-title">Pasos:</h4>
                     <ol>
                         <?php 
                             $listaPasos = [
-                                ["descripcion" =>"Enjuague el arroz para sushi hasta que el agua salga clara. Cocine con agua en una olla arrocera o en una olla."],
-                                ["descripcion" =>"En una cacerola pequeña, caliente el vinagre de arroz, el azúcar y la sal hasta que se disuelva. Mézclalo con el arroz cocido y déjalo enfriar."],
-                                ["descripcion" =>"Coloque una hoja de nori sobre una estera de bambú para sushi. Extienda una fina capa de arroz sobre el nori, dejando un borde de 1 pulgada en la parte superior."],
-                                ["descripcion" =>"Agregue los rellenos que desee en una línea a lo largo del arroz."],
-                                ["descripcion" =>"Enrolle bien el sushi usando el tapete, sellando el borde con un poco de agua."],
-                                ["descripcion" =>"Corte el rollo en 6-8 trozos con un cuchillo afilado."],
-                                ["descripcion" =>"Sirva con salsa de soja, wasabi y jengibre encurtido."]
+                                ["descripcion" =>"En un bol, mezcle los huevos, el azúcar y la miel hasta que quede suave."],
+                                ["descripcion" =>"Tamice la harina y el polvo para hornear, luego mezcle hasta que estén combinados."],
+                                ["descripcion" =>"Agregue agua y revuelva hasta que la masa esté suave y ligeramente líquida."],
+                                ["descripcion" =>"Calienta una sartén antiadherente a fuego medio-bajo y engrasa ligeramente."],
+                                ["descripcion" =>"Vierta pequeñas cantidades de masa (aproximadamente 3 cucharadas por panqueque) en el molde para formar círculos."],
+                                ["descripcion" =>"Cocine hasta que se formen burbujas en la superficie (aproximadamente 2 minutos), luego voltee y cocine por otros 1-2 minutos."],
+                                ["descripcion" =>"Deje que los panqueques se enfríen y luego coloque una cucharada de pasta de frijoles rojos entre dos panqueques."]
                             ];
                             foreach ($listaPasos as $paso){
                                 echo'<li class="step-item">'.$paso["descripcion"].'</li>';

@@ -1,5 +1,5 @@
 <?php
-$recetas = file('../datos/recetas-saladas.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+$recetas = file('../datos/recetas-dulces.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 ?>
 
 <!DOCTYPE html>
@@ -37,9 +37,9 @@ $recetas = file('../datos/recetas-saladas.txt', FILE_IGNORE_NEW_LINES | FILE_SKI
                     <?php 
                         $elementosHeader = [
                             ["directorio" => "../index.php", "Nombre" => "Inicio", "clase"=> "nav-link"],
-                            ["directorio" =>"../Platillos/menu.php", "Nombre" => "Menú", "clase"=> "nav-link active"],
+                            ["directorio" =>"../Platillos/menu.php", "Nombre" => "Menú", "clase"=> "nav-link"],
                             ["directorio" =>"../InfoPersonal/personalSakura.php", "Nombre" => "Nuestro Equipo", "clase"=> "nav-link"],
-                            ["directorio" =>"../recetasPlatillos/recetas.php", "Nombre" => "Nuestras Recetas", "clase"=> "nav-link"],
+                            ["directorio" =>"../recetasPlatillos/recetas.php", "Nombre" => "Nuestras Recetas", "clase"=> "nav-link active"],
                             ["directorio" =>"../Resenias/resenias.php", "Nombre" => "Reseñas", "clase"=> "nav-link"],
                             ["directorio" =>"../Reservaciones/index.php", "Nombre" => "Reservaciones", "clase"=> "nav-link"]
                         ];
@@ -54,7 +54,7 @@ $recetas = file('../datos/recetas-saladas.txt', FILE_IGNORE_NEW_LINES | FILE_SKI
         </div>
     </nav>
 
-    <h1 class="text-center mt-5 pt-5">Sakura Dreams - Platillos Fuertes</h1>
+    <h1 class="text-center mt-5 pt-5">Sakura Dreams - Recetas Dulces</h1>
 
     <div class="container my-5">
         <div class="row">

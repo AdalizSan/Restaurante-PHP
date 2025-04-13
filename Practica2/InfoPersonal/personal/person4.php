@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sakura Dreams - Cocinero Secundario 1    </title>
+    <title>Sakura Dreams - Chef secundario 3  </title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Restaurante Jápones en guatemala">
@@ -30,45 +30,45 @@
             </div>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../Platillos/menu.html">Menú</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../../InfoPersonal/personalSakura.html">Nuestro Equipo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../recetasPlatillos/recetas.html">Nuestras Recetas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../Resenias/resenias.html">Reseñas</a>
-                    </li>
+                    <?php 
+                        $elementosHeader = [
+                            ["directorio" => "../../index.php", "Nombre" => "Inicio", "clase"=> "nav-link"],
+                            ["directorio" =>"../../Platillos/menu.php", "Nombre" => "Menú", "clase"=> "nav-link"],
+                            ["directorio" =>"../../InfoPersonal/personalSakura.php", "Nombre" => "Nuestro Equipo", "clase"=> "nav-link active"],
+                            ["directorio" =>"../../recetasPlatillos/recetas.php", "Nombre" => "Nuestras Recetas", "clase"=> "nav-link"],
+                            ["directorio" =>"../../Resenias/resenias.php", "Nombre" => "Reseñas", "clase"=> "nav-link"],
+                            ["directorio" =>"../../Reservaciones/index.php", "Nombre" => "Reservaciones", "clase"=> "nav-link"]
+                        ];
+                        foreach($elementosHeader as $elemento){
+                            echo '<li class="nav-item">';
+                            echo '<a class="' . $elemento["clase"] . '" href="' . $elemento["directorio"] . '">' . $elemento["Nombre"] . '</a>';
+                            echo '</li>';
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
     </nav>
-    <h1>Sakura Dreams - Cocinero Secundario 1</h1>
+    <h1>Sakura Dreams - Chef secundario 3  </h1>
     <div class="container recipe-container">
         <div class="fixed-left">
-            <img src="../../imagenes/personal_sousChef.jpg" class="recipe-image" alt="Cocinero Secundario 1">
-            <p class="recipe-description">Gestiona la sección de repostería y postres, asegurando un acabado perfecto para cada comida.</p>
+            <img src="../../imagenes/personal_especialistaTeppanyaki.jpg" class="recipe-image" alt="Chef secundario 3  ">
+            <p class="recipe-description">Se encarga de teppanyaki y platos a la parrilla, brindando una experiencia gastronómica interactiva.</p>
         </div>
             <div class="steps-container">
                 <div class="row ingredients">
                     <div class="col-12">
                         <h4 class="recipe-title">Nombre:</h4>
                         <ul>
-                            <li class="ingredient-item">Emiko Sato </li>
+                            <li class="ingredient-item">Akira Tanaka</li>
                         </ul>
                         <h4 class="recipe-title">Puesto:</h4>
                         <ul>
-                            <li class="ingredient-item">Sous Chef (Pastelería y Postres) </li>
+                            <li class="ingredient-item">Especialista en Teppanyaki y Grill</li>
                         </ul>
                         <h4 class="recipe-title">Biografía:</h4>
                         <ul>
-                            <li class="ingredient-item">Emiko Sato es la fuerza creativa detrás de los exquisitos postres de Sakura Dreams. Emiko, graduada de Le Cordon Bleu en Tokio, combina sabores tradicionales japoneses con técnicas modernas para crear dulces inolvidables como el tiramisú de matcha y los macarons de sakura. Su viaje comenzó en la cocina de su abuela, donde aprendió el arte del wagashi (dulces japoneses). Emiko también es una defensora de la sostenibilidad y utiliza ingredientes locales y orgánicos siempre que es posible. En su tiempo libre le gusta pintar y hacer senderismo.</li>
+                            <li class="ingredient-item">Akira Tanaka es el maestro de la parrilla teppanyaki en Sakura Dreams. Con talento para la interpretación y un profundo conocimiento de los sabores, Akira entretiene a los invitados mientras prepara de manera experta platos como mariscos teppanyaki y carne wagyu. Se formó en Osaka, donde perfeccionó sus habilidades en restaurantes de teppanyaki de alta energía. A Akira también le apasiona orientar a jóvenes chefs y compartir su conocimiento de las tradiciones culinarias japonesas. En su tiempo libre practica artes marciales y le gusta explorar los mercados de comida callejera.</li>
                         </ul>
                     </div>
                 </div>

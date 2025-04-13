@@ -1,11 +1,7 @@
-<?php
-$recetas = file('../datos/recetas-saladas.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sakura Dreams</title>
+    <title>Sakura Dreams - Recetas</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Restaurante Jápones en guatemala">
@@ -37,9 +33,9 @@ $recetas = file('../datos/recetas-saladas.txt', FILE_IGNORE_NEW_LINES | FILE_SKI
                     <?php 
                         $elementosHeader = [
                             ["directorio" => "../index.php", "Nombre" => "Inicio", "clase"=> "nav-link"],
-                            ["directorio" =>"../Platillos/menu.php", "Nombre" => "Menú", "clase"=> "nav-link active"],
+                            ["directorio" =>"../Platillos/menu.php", "Nombre" => "Menú", "clase"=> "nav-link"],
                             ["directorio" =>"../InfoPersonal/personalSakura.php", "Nombre" => "Nuestro Equipo", "clase"=> "nav-link"],
-                            ["directorio" =>"../recetasPlatillos/recetas.php", "Nombre" => "Nuestras Recetas", "clase"=> "nav-link"],
+                            ["directorio" =>"../recetasPlatillos/recetas.php", "Nombre" => "Nuestras Recetas", "clase"=> "nav-link active"],
                             ["directorio" =>"../Resenias/resenias.php", "Nombre" => "Reseñas", "clase"=> "nav-link"],
                             ["directorio" =>"../Reservaciones/index.php", "Nombre" => "Reservaciones", "clase"=> "nav-link"]
                         ];
@@ -53,30 +49,29 @@ $recetas = file('../datos/recetas-saladas.txt', FILE_IGNORE_NEW_LINES | FILE_SKI
             </div>
         </div>
     </nav>
-
-    <h1 class="text-center mt-5 pt-5">Sakura Dreams - Platillos Fuertes</h1>
-
-    <div class="container my-5">
-        <div class="row">
-            <?php foreach ($recetas as $linea): 
-                list($titulo, $imagen, $descripcion, $precio, $enlace) = explode('|', $linea);
+    <div class="container space-between-header-cards">
+        <div class="row justify-content-center">
+            <?php 
+                $cards = [
+                    ["nombre"=> "Recetas - Platillos Fuertes","descripcion"=> "Todos nuestras recetas de los platillos fuertes disponibles de Sakura Dreams.","link"=> "recetasSaladas.php","nombreLink"=>"Ir al recetario","imagen"=>"../imagenes/imagenResetario_platillosFuertes.jpg","nombreIma"=>"Imagen Platillos Fuertes:)"],
+                    ["nombre"=> "Recetas - Postres","descripcion"=> "Todos nuestras recetas de los postres disponibles de Sakura Dreams.","link"=> "recetasDulces.php","nombreLink"=>"Ir al recetario","imagen"=>"../imagenes/imagenResetario_postres.jpg","nombreIma"=>"Imagen Postres"]
+                ];
+                foreach ($cards as $card){
+                    echo'<div class="col-md-4">';
+                        echo'<div class="card">';
+                            echo'<img src="'. $card["imagen"].'" class="card-img-top" alt="'. $card["nombreIma"].'">';
+                            echo'<div class="card-body">';
+                                echo'<h5 class="card-title">'. $card["nombre"].'</h5>';
+                                echo'<p class="card-text">'. $card["descripcion"].'</p>';
+                                echo'<a href="'. $card["link"].'" class="btn btn-color">'. $card["nombreLink"].'</a>';
+                            echo'</div>';
+                        echo'</div>';
+                    echo'</div>';
+                }
             ?>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <img src="../imagenes/<?php echo trim($imagen); ?>" class="card-img-top" alt="Imagen de <?php echo htmlspecialchars($titulo); ?>">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo htmlspecialchars($titulo); ?></h5>
-                        <p class="card-text"><?php echo htmlspecialchars($descripcion); ?></p>
-                        <ul><li><b>Precio:</b> <?php echo htmlspecialchars($precio); ?></li></ul>
-                        <a href="<?php echo htmlspecialchars($enlace); ?>" class="btn btn-color">Ver receta</a>
-                    </div>
-                </div>
-            </div>
-            <?php endforeach; ?>
         </div>
     </div>
-
-    <footer class="footer text-center py-3">
+    <footer class="footer">
         <p>&copy; 2025 Sakura Dreams.</p>
     </footer>
 </body>

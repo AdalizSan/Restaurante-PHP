@@ -32,30 +32,26 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Platillos/menu.html">Menú</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="InfoPersonal/personalSakura.html">Nuestro Equipo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="recetasPlatillos/recetas.html">Nuestras Recetas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Resenias/resenias.html">Reseñas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Reservaciones/index.php">Reservaciones</a>
-                        </li>
+                    <?php 
+                        $elementosHeader = [
+                            ["directorio" => "#", "Nombre" => "Inicio", "clase"=> "nav-link active"],
+                            ["directorio" =>"Platillos/menu.php", "Nombre" => "Menú", "clase"=> "nav-link"],
+                            ["directorio" =>"InfoPersonal/personalSakura.php", "Nombre" => "Nuestro Equipo", "clase"=> "nav-link"],
+                            ["directorio" =>"recetasPlatillos/recetas.php", "Nombre" => "Nuestras Recetas", "clase"=> "nav-link"],
+                            ["directorio" =>"Resenias/resenias.php", "Nombre" => "Reseñas", "clase"=> "nav-link"],
+                            ["directorio" =>"Reservaciones/index.php", "Nombre" => "Reservaciones", "clase"=> "nav-link"]
+                        ];
+                        foreach($elementosHeader as $elemento){
+                            echo '<li class="nav-item">';
+                            echo '<a class="' . $elemento["clase"] . '" href="' . $elemento["directorio"] . '">' . $elemento["Nombre"] . '</a>';
+                            echo '</li>';
+                        }
+                    ?>
                     </ul>
                 </div>
             </div>
         </nav> 
         <main>  
-               
         <div class="container marketing">
 
             <h1> Sakura Dreams - Inicio</h1> 

@@ -1,5 +1,5 @@
-Maki Rolls clásicos|platofuerte_Maki Rolls.jpg|Los maki rolls son un tipo de sushi que se elabora enrollando arroz con vinagre, pescado fresco y verduras en algas (nori).|Q 55.50|../recetasPlatillos/recetasSaladas/receta1.html
-Tonkotsu Ramen|platofuerte_Tonkotsu Ramen.jpg|El ramen tonkotsu es un ramen rico y cremoso con caldo de huesos de cerdo.|Q 59.80|../recetasPlatillos/recetasSaladas/receta2.html
-Tempura de verduras|platofuerte_Vegetable Tempura.jpg|La tempura de verduras es un plato ligero y crujiente.|Q 65.50|../recetasPlatillos/recetasSaladas/receta3.html
-Katsudon|platofuerte_Katsudon.jpg|El katsudon es un reconfortante plato de arroz cubierto con chuleta de cerdo empanizada.|Q 45.50|../recetasPlatillos/recetasSaladas/receta4.html
-Mariscos Teppanyaki|platofuerte_Teppanyaki Seafood.jpg|El marisco teppanyaki es un plato chisporroteante cocinado en una plancha de hierro.|Q 75.50|../recetasPlatillos/recetasSaladas/receta5.html
+Maki Rolls clásicos|platofuerte_Maki Rolls.jpg|Los maki rolls son un tipo de sushi que se elabora enrollando arroz con vinagre, pescado fresco y verduras en algas (nori).|Q 55.50|../recetasPlatillos/recetasSaladas/receta1.php
+Tonkotsu Ramen|platofuerte_Tonkotsu Ramen.jpg|El ramen tonkotsu es un ramen rico y cremoso con caldo de huesos de cerdo.|Q 59.80|../recetasPlatillos/recetasSaladas/receta2.php
+Tempura de verduras|platofuerte_Vegetable Tempura.jpg|La tempura de verduras es un plato ligero y crujiente.|Q 65.50|../recetasPlatillos/recetasSaladas/receta3.php
+Katsudon|platofuerte_Katsudon.jpg|El katsudon es un reconfortante plato de arroz cubierto con chuleta de cerdo empanizada.|Q 45.50|../recetasPlatillos/recetasSaladas/receta4.php
+Mariscos Teppanyaki|platofuerte_Teppanyaki Seafood.jpg|El marisco teppanyaki es un plato chisporroteante cocinado en una plancha de hierro.|Q 75.50|../recetasPlatillos/recetasSaladas/receta5.php

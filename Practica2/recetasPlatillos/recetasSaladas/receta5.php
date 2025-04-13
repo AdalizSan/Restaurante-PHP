@@ -30,21 +30,21 @@
             </div>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../Platillos/menu.html">Menú</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../InfoPersonal/personalSakura.html">Nuestro Equipo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../../recetasPlatillos/recetas.html">Nuestras Recetas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../Resenias/resenias.html">Reseñas</a>
-                    </li>
+                    <?php 
+                        $elementosHeader = [
+                            ["directorio" => "../../index.php", "Nombre" => "Inicio", "clase"=> "nav-link"],
+                            ["directorio" =>"../../Platillos/menu.php", "Nombre" => "Menú", "clase"=> "nav-link"],
+                            ["directorio" =>"../../InfoPersonal/personalSakura.php", "Nombre" => "Nuestro Equipo", "clase"=> "nav-link"],
+                            ["directorio" =>"../../recetasPlatillos/recetas.php", "Nombre" => "Nuestras Recetas", "clase"=> "nav-link active"],
+                            ["directorio" =>"../../Resenias/resenias.php", "Nombre" => "Reseñas", "clase"=> "nav-link"],
+                            ["directorio" =>"../../Reservaciones/index.php", "Nombre" => "Reservaciones", "clase"=> "nav-link"]
+                        ];
+                        foreach($elementosHeader as $elemento){
+                            echo '<li class="nav-item">';
+                            echo '<a class="' . $elemento["clase"] . '" href="' . $elemento["directorio"] . '">' . $elemento["Nombre"] . '</a>';
+                            echo '</li>';
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -60,25 +60,38 @@
                     <div class="col-12">
                     <h4 class="recipe-title">Ingredientes:</h4>
                     <ul>
-                        <li class="ingredient-item">200 g de vieiras</li>    
-                        <li class="ingredient-item">200 g de camarones</li>
-                        <li class="ingredient-item">200 g de calamares (limpios y cortados en rodajas)</li>
-                        <li class="ingredient-item">2 cucharadas de mantequilla</li>
-                        <li class="ingredient-item">2 dientes de ajo (picados)</li>
-                        <li class="ingredient-item">2 cucharadas de salsa de soja </li>
-                        <li class="ingredient-item">1 cucharada de sake (opcional) </li>
-                        <li class="ingredient-item">1 cucharada de cebollas verdes picadas </li>
-                    </ul>
+                    <?php 
+                            $listaIngredientes = [
+                                ["descripcion" => "200 g de vieiras"],
+                                ["descripcion" => "200 g de camarones"],
+                                ["descripcion" => "200 g de calamares (limpios y cortados en rodajas)"],
+                                ["descripcion" => "2 cucharadas de mantequilla"],
+                                ["descripcion" => "2 dientes de ajo (picados)"],
+                                ["descripcion" => "2 cucharadas de salsa de soja"],
+                                ["descripcion" => "1 cucharada de sake (opcional)"],
+                                ["descripcion" => "1 cucharada de cebollas verdes picadas"],
+                            ];
+                            foreach ($listaIngredientes as $ingrediente){
+                                echo'<li class="ingredient-item">'.$ingrediente["descripcion"].'</li>';
+                            }
+                        ?>
                     </div>
                 </div>
             <div class="row steps">
                 <div class="col-12">
                     <h4 class="recipe-title">Pasos:</h4>
                     <ol>
-                        <li class="step-item">Calienta una parrilla teppanyaki o una sartén grande.</li>
-                        <li class="step-item">Agregue la mantequilla y el ajo, luego saltee los mariscos hasta que estén bien cocidos.</li>
-                        <li class="step-item">Agregue la salsa de soja y el sake, revolviendo para cubrir.</li>
-                        <li class="step-item">Adorne con cebollas verdes y sirva inmediatamente.</li>
+                        <?php 
+                            $listaPasos = [
+                                ["descripcion" =>"Calienta una parrilla teppanyaki o una sartén grande."],
+                                ["descripcion" =>"Agregue la mantequilla y el ajo, luego saltee los mariscos hasta que estén bien cocidos."],
+                                ["descripcion" =>"Agregue la salsa de soja y el sake, revolviendo para cubrir."],
+                                ["descripcion" =>"Adorne con cebollas verdes y sirva inmediatamente."]
+                            ];
+                            foreach ($listaPasos as $paso){
+                                echo'<li class="step-item">'.$paso["descripcion"].'</li>';
+                            }
+                        ?>
                     </ol>
                 </div>
             </div>

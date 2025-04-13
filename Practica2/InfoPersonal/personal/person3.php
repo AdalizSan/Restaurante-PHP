@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sakura Dreams - Chef principal  </title>
+    <title>Sakura Dreams - Chef secundario 2  </title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Restaurante Jápones en guatemala">
@@ -30,50 +30,51 @@
             </div>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../Platillos/menu.html">Menú</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../../InfoPersonal/personalSakura.html">Nuestro Equipo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../recetasPlatillos/recetas.html">Nuestras Recetas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../Resenias/resenias.html">Reseñas</a>
-                    </li>
+                    <?php 
+                        $elementosHeader = [
+                            ["directorio" => "../../index.php", "Nombre" => "Inicio", "clase"=> "nav-link"],
+                            ["directorio" =>"../../Platillos/menu.php", "Nombre" => "Menú", "clase"=> "nav-link"],
+                            ["directorio" =>"../../InfoPersonal/personalSakura.php", "Nombre" => "Nuestro Equipo", "clase"=> "nav-link active"],
+                            ["directorio" =>"../../recetasPlatillos/recetas.php", "Nombre" => "Nuestras Recetas", "clase"=> "nav-link"],
+                            ["directorio" =>"../../Resenias/resenias.php", "Nombre" => "Reseñas", "clase"=> "nav-link"],
+                            ["directorio" =>"../../Reservaciones/index.php", "Nombre" => "Reservaciones", "clase"=> "nav-link"]
+                        ];
+                        foreach($elementosHeader as $elemento){
+                            echo '<li class="nav-item">';
+                            echo '<a class="' . $elemento["clase"] . '" href="' . $elemento["directorio"] . '">' . $elemento["Nombre"] . '</a>';
+                            echo '</li>';
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
     </nav>
-    <h1>Sakura Dreams - Chef principal  </h1>
+    <h1>Sakura Dreams - Chef secundario 2  </h1>
     <div class="container recipe-container">
         <div class="fixed-left">
-            <img src="../../imagenes/personal_chef ejectivo.jpg" class="recipe-image" alt="Chef principal ">
-            <p class="recipe-description">Supervisa toda la cocina, el desarrollo del menú y el control de calidad. </p>
+            <img src="../../imagenes/personal_jefeSushi.jpg" class="recipe-image" alt="Chef secundario 2   ">
+            <p class="recipe-description">Lidera el equipo de sushi y garantiza los más altos estándares de preparación de sushi. </p>
         </div>
             <div class="steps-container">
                 <div class="row ingredients">
                     <div class="col-12">
                         <h4 class="recipe-title">Nombre:</h4>
                         <ul>
-                            <li class="ingredient-item">Hiroshi Takahashi</li>
+                            <li class="ingredient-item">Kenji Nakamura  </li>
                         </ul>
                         <h4 class="recipe-title">Puesto:</h4>
                         <ul>
-                            <li class="ingredient-item">Chef Ejecutivo</li>
+                            <li class="ingredient-item">Jefe de cocina de sushi</li>
                         </ul>
                         <h4 class="recipe-title">Biografía:</h4>
                         <ul>
-                            <li class="ingredient-item">Hiroshi Takahashi es el corazón y el alma de Sakura Dreams. Con más de 20 años de experiencia en cocina japonesa, Hiroshi se formó con chefs de renombre en Kioto y Tokio antes de ganarse la reputación de maestro de los platos japoneses tradicionales y modernos. Se especializa en kaiseki (comidas de varios platos) y sushi, aportando un toque artístico a cada plato. La pasión de Hiroshi por los ingredientes de temporada y su meticulosa atención al detalle lo han convertido en una figura célebre en el mundo culinario. Fuera de la cocina, le gusta practicar la caligrafía y explorar la naturaleza en busca de inspiración.</li>
+                            <li class="ingredient-item">Kenji Nakamura es un virtuoso del sushi con más de 15 años de experiencia. Nacido en Hokkaido, Kenji creció rodeado de mariscos frescos, lo que inspiró su amor por el sushi. Se formó en la prestigiosa Academia de Sushi de Tokio y ha trabajado en restaurantes de sushi con estrellas Michelin en todo Japón. Kenji es conocido por su precisión y capacidad para resaltar los sabores naturales del pescado. También es un sumiller de sake certificado y combina sus creaciones de sushi con el sake perfecto. Fuera del trabajo, a Kenji le gusta pescar y tocar el shamisen. </li>
                         </ul>
                     </div>
                 </div>
             </div>    
         </div>
+
     </div>
     <footer class="footer">
         <p>&copy; 2025 Sakura Dreams.</p>

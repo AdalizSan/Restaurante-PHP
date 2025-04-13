@@ -1,3 +1,7 @@
+<?php
+$recetas = file('../datos/recetas-saladas.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,50 +34,49 @@
             </div>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Platillos/menu.html">Menú</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../InfoPersonal/personalSakura.html">Nuestro Equipo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../recetasPlatillos/recetas.html">Nuestras Recetas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Resenias/resenias.html">Reseñas</a>
-                    </li>
+                    <?php 
+                        $elementosHeader = [
+                            ["directorio" => "../index.php", "Nombre" => "Inicio", "clase"=> "nav-link"],
+                            ["directorio" =>"../Platillos/menu.php", "Nombre" => "Menú", "clase"=> "nav-link"],
+                            ["directorio" =>"../InfoPersonal/personalSakura.php", "Nombre" => "Nuestro Equipo", "clase"=> "nav-link"],
+                            ["directorio" =>"../recetasPlatillos/recetas.php", "Nombre" => "Nuestras Recetas", "clase"=> "nav-link active"],
+                            ["directorio" =>"../Resenias/resenias.php", "Nombre" => "Reseñas", "clase"=> "nav-link"],
+                            ["directorio" =>"../Reservaciones/index.php", "Nombre" => "Reservaciones", "clase"=> "nav-link"]
+                        ];
+                        foreach($elementosHeader as $elemento){
+                            echo '<li class="nav-item">';
+                            echo '<a class="' . $elemento["clase"] . '" href="' . $elemento["directorio"] . '">' . $elemento["Nombre"] . '</a>';
+                            echo '</li>';
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container space-between-header-cards">
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../imagenes/imagenResetario_platillosFuertes.jpg" class="card-img-top" alt="Imagen de recetario de platillosFuertes">
+
+    <h1 class="text-center mt-5 pt-5">Sakura Dreams - Recetas Saladas</h1>
+
+    <div class="container my-5">
+        <div class="row">
+            <?php foreach ($recetas as $linea): 
+                list($titulo, $imagen, $descripcion, $precio, $enlace) = explode('|', $linea);
+            ?>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="../imagenes/<?php echo trim($imagen); ?>" class="card-img-top" alt="Imagen de <?php echo htmlspecialchars($titulo); ?>">
                     <div class="card-body">
-                        <h5 class="card-title">Recetas - Platillos Fuertes</h5>
-                        <p class="card-text">Todos nuestras recetas de los platillos fuertes disponibles de Sakura Dreams. </p>
-                        <a href="recetasSaladas.html" class="btn btn-color">Ir al recetario</a>
+                        <h5 class="card-title"><?php echo htmlspecialchars($titulo); ?></h5>
+                        <p class="card-text"><?php echo htmlspecialchars($descripcion); ?></p>
+                        <ul><li><b>Precio:</b> <?php echo htmlspecialchars($precio); ?></li></ul>
+                        <a href="<?php echo htmlspecialchars($enlace); ?>" class="btn btn-color">Ver receta</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../imagenes/imagenResetario_postres.jpg" class="card-img-top" alt="Imagen de recetario de Postres">
-                    <div class="card-body">
-                        <h5 class="card-title">Recetas - Postres</h5>
-                        <p class="card-text">Todos nuestras recetas de los postres disponibles de Sakura Dreams. </p>
-                        <a href="recetasDulces.html" class="btn btn-color">Ir al recetario</a>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
-    <footer class="footer">
+
+    <footer class="footer text-center py-3">
         <p>&copy; 2025 Sakura Dreams.</p>
     </footer>
 </body>
